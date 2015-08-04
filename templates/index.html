@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cluboard</title>
+
+	<!-- Style -->
+	<link rel="stylesheet" type="text/css" href="public/assets/bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="public/assets/style.css">
+
+	<!-- Script -->
+	<script type="text/javascript" src="public/assets/bower_components/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="public/assets/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="public/assets/application.js"></script>
+
+</head>
+<body>
+	<section class="wrapper col-lg-12">
+		<video autoplay loop muted id="bgvid">
+			<source src="public/assets/bgvid/bgvid.webm" type="video/webm">
+			<source src="public/assets/bgvid/bgvid.mp4" type="video/mp4">
+		</video>
+		<h2 class="banner">Check out your clubhouse latest announcement!</h2>
+		<form class="log_in form-inline col-lg-12">
+			<input type="text" class="form-control" id="log_in_username" placeholder="Username">
+			<input type="password" class="form-control" id="log_in_password" placeholder="Password">
+			<button class="btn btn-default">Log in</button>
+		</form>
+		<div class="breaker col-lg-12">
+		</div>
+		<form class="sign_up form-inline col-lg-12">
+			<input type="text" class="form-control" id="sign_up_username" placeholder="Username">
+			<input type="password" class="form-control" id="sign_up_password" placeholder="Password">
+			<button class="btn btn-default">Sign up!</button>
+		</form>
+		<div class="alert alert-danger alert-dismissible col-lg-12" style="clear:both; display: none" role="alert">
+		  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		  <strong>Warning!</strong>Opsss there is something wrong!
+		</div>
+		<div class="alert alert-success" role="alert" style="clear: both; display: none">
+		  <a href="#" class="alert-link">You have signed up successfully!</a>
+		</div>
+		<div class="alert alert-danger notSignUp" role="alert" style="clear: both; display: none">
+		  <a href="#" class="alert-link">There are some errors!</a>
+		</div>
+	</section>
+</body>
+</html>

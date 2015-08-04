@@ -1,0 +1,31 @@
+.wrapper {
+	padding: 30px 250px 10px 250px;
+	text-align: center;
+}
+
+.wrapper .search_section {
+	border-bottom: 1px solid lightgrey;
+}
+
+.wrapper .search_section h2 {
+	margin-top: 10px;
+	font-size: 22px;
+	color: black;
+	margin-bottom: 10px;
+}
+
+.wrapper .search_section h2 span {
+	color: crimson;
+	font-size: 28px;
+	font-style: italic;
+	text-decoration: underline;
+}
+
+.wrapper .search_section input[type="text"] {
+	border: 1px solid lightgrey;
+	font-size: 30px;
+	margin-top: 40px;
+	height: 50px;
+	margin-bottom: 50px;
+}
+
