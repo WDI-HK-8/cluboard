@@ -30,7 +30,8 @@ exports.register = function (server, option, next) {
 
 							var newSession = {
 								session_id: randomKey,
-								user_id: result._id
+								user_id:  result._id,
+								username: user.username
 							}
 
 							db.collection('sessions').insert(newSession, function (err, result){
@@ -39,7 +40,7 @@ exports.register = function (server, option, next) {
 									}
 
 									request.session.set('cluboard_session', newSession);
-									return reply({insertCookie: "success"})
+									return reply({insertCookie: "success"});
 							})
 						} else {
 							reply({insertCookie: 'fail'});
@@ -56,13 +57,13 @@ exports.register = function (server, option, next) {
 				var db = request.server.plugins["hapi-mongodb"].db;
 
 				if(!session) {
-					return reply('You are not even logged in!');
+					return reply({logout: true});
 				}
 
-				db.collection('sessions').remove({session_id: session}, function(err, log){
-					if (err) {return reply('Internal MongoDB error', err)}
+				db.collection('sessions').remove({session_id: session.session_id}, function(err, log){
+					if (err) {return reply({logout: true})}
 
-					reply(log);
+					reply({logout: true});
 
 				})
 			}

@@ -16,17 +16,6 @@ exports.register = function (server, option, next) {
 			}
 		},
 		{
-			method: 'GET',
-			path: '/api/users/',
-			handler: function (request, reply) {
-				var db = request.server.plugins["hapi-mongodb"].db;
-				db.collection('users').findOne({_id: encodeURIComponent(request.params.id)}, function (err, writeResult){
-					if (err) {return reply({fail: true})};
-					reply(writeResult);
-				});
-			}
-		},
-		{
 			method: 'POST',
 			path: '/api/users',
 			handler: function(request, reply) {
@@ -55,6 +44,22 @@ exports.register = function (server, option, next) {
 								return reply({create: true})
 							})
 						})
+					})
+				})
+			}
+		},
+		{
+			method: "PUT",
+			path: "/api/users/club",
+			handler: function(request, reply) {
+				var db = request.server.plugins['hapi-mongodb'].db;
+				var session = request.session.get('cluboard_session');
+				db.collection('clubs').findOne({clubcode: request.clubcode}, function(err, targetClub) {
+					if (err) {return reply('opsss!')}
+					db.collection('users').findOne({username: session.session.username}, function (err,targetUser) {
+						if (err) {return reply('Can\'t find it!')}
+						targetUser.clublist.push(targetClub.clubname);
+						reply(targetUser.clublist);
 					})
 				})
 			}

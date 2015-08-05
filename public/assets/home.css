@@ -1,6 +1,13 @@
 .wrapper {
 	padding: 30px 250px 10px 250px;
-	text-align: center;
+	text-align: left;
+}
+
+.wrapper .club_code {
+	position: absolute;
+	top: 0px;
+	right: 20px;
+	width: 150px;
 }
 
 .wrapper .search_section {
@@ -14,12 +21,6 @@
 	margin-bottom: 10px;
 }
 
-.wrapper .search_section h2 span {
-	color: crimson;
-	font-size: 28px;
-	font-style: italic;
-	text-decoration: underline;
-}
 
 .wrapper .search_section input[type="text"] {
 	border: 1px solid lightgrey;
@@ -27,5 +28,50 @@
 	margin-top: 40px;
 	height: 50px;
 	margin-bottom: 50px;
+}
+
+.wrapper .search_section h2 span.subscribedClub a {
+	color: crimson;
+	font-size: 28px;
+	font-style: italic;
+	text-decoration: underline;
+}
+
+.wrapper .search_section h2 span.subscribedClub a:hover {
+	color: lightblue;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.wrapper h2 span.subscribedClub a span.glyphicon{
+	color: crimson;
+	font-size: 18px;
+	font-style: italic;
+}
+
+.wrapper h2 span.subscribedClub:hover span.glyphicon{
+	color: lightblue;
+	cursor: pointer;
+}
+.content .oneNews {
+	height: 200px;
+	border: 1px solid lightgrey;
+	border-radius: 3px;
+	margin-top: 30px;
+	padding: 0 30px 0 30px;
+	text-align: left;
+}
+
+.content .oneNews .title {
+	margin-top: 30px;
+	margin-bottom: 20px;
+	font-size: 32px;
+	overflow: auto;
+}
+
+.content .oneNews .newsContent {
+	border-top: 1px solid lightgrey;
+	padding-top: 20px;
+	overflow: auto;
 }
 

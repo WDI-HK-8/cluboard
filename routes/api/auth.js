@@ -12,7 +12,6 @@ module.exports.authenticated = function(request, callback) {
 		if (result === null) {
 			return callback({
 				authenticated: false,
-				session: session
 			})
 		} else {
 			return callback ({
