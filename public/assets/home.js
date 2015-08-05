@@ -8,7 +8,7 @@ var Home = {
 			type: "GET",
 			url: '/api/sessions',
 			success: function(response){
-				if (response.authenticated === false) {
+				if (!response.authenticated) {
 					window.location.replace('/');
 				} else {
 					$('.top_right_name').html(response.session.username + '<span class="caret" style="margin-left: 10px"></span>');
@@ -39,17 +39,49 @@ var Home = {
 				clubcode: code
 			},
 			success: function(response) {
+				Home.getSubscribe();
+			}
+		})
+	},
+
+	getSubscribe: function (){
+
+		$.ajax({
+			type: "GET",
+			url: "/api/users/club",
+			success: function (response) {
+				if (response.length === 0) {
+					$('span.subscribedClub').html('<p class="noBelong">You belong to nowhere :(</p>');
+					return;
+				}
+				var html = "";
+				for (var i = 0; i < response.length; i++){
+							html += "<a name=\"";
+							html += response[i];
+							html += "\">";
+							html += response[i];
+							html += "<span class=\"glyphicon glyphicon-remove\"></span></a>";
+				}
+				$('span.subscribedClub').html(html);
+			}
+		})
+	},
+	
+	deleteSubscribe: function (clubname){
+		$.ajax({
+			type: "DELETE",
+			url: "/api/users/club/" + clubname,
+			success: function (response) {
 				console.log(response);
-			},
-			error: function (err) {
-				console.log('stupid!');
 			}
 		})
 	}
 
 }
-
+Home.getSubscribe();
 Home.getUserInfo();
+// getClubNameList
+// getAllRelevantNews
 
 $(document).on('click', '.sign_out', function(){
 	event.preventDefault();
@@ -58,10 +90,18 @@ $(document).on('click', '.sign_out', function(){
 
 $(document).on('click', '.goAddClub', function(){
 	event.preventDefault();
-	var code = $('input[placeholder="club code"]').val();
+	var code = $('input[name="club-code"]').val();
 	Home.addSubscribe(code);
+	$('input[name="club-code"]').val("");
 })
 
+$(document).on('click', 'span.subscribedClub a[name]', function (){
+	var clubname = $(this).attr('name');
+	Home.deleteSubscribe(clubname);
+	setTimeout(function(){
+		Home.getSubscribe();
+	}, 1)
+})
 
 
 
