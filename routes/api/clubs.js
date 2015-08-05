@@ -9,7 +9,7 @@ exports.register = function (server, option, next) {
 					"clubname": request.payload.club.clubname,
 					"clubcode": request.payload.club.clubcode
 				}
-				db.collection('clubs').insert(club, function(err, result){
+				db.collection('clubs').insert(club, function(err, writeResult){
 					if (err) {return reply('Can\'t add a club!')};
 					reply('added!')
 				})
@@ -20,9 +20,9 @@ exports.register = function (server, option, next) {
 			path: '/api/clubs',
 			handler: function (request, reply) {
 				var db = request.server.plugins['hapi-mongodb'].db;
-				db.collection('clubs').find().toArray(function(err, result){
+				db.collection('clubs').find().toArray(function(err, clubs){
 					if(err) {return reply('Can\'t retrieve clublist')}
-					reply(result);
+					reply(clubs);
 				})
 			}
 		}

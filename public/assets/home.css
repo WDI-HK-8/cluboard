@@ -30,29 +30,24 @@
 	margin-bottom: 50px;
 }
 
-.wrapper .search_section h2 span.subscribedClub a {
+span.subscribedClub a {
 	color: crimson;
-	font-size: 28px;
-	font-style: italic;
-	text-decoration: underline;
-}
-
-.wrapper .search_section h2 span.subscribedClub a:hover {
-	color: lightblue;
-	cursor: pointer;
+	display: inline-block;
+	margin-left: 8px;
 	text-decoration: none;
 }
 
-.wrapper h2 span.subscribedClub a span.glyphicon{
-	color: crimson;
-	font-size: 18px;
-	font-style: italic;
+span.subscribedClub a:hover {
+	cursor: pointer;
+	color: skyblue;
+	text-decoration: underline;
 }
 
-.wrapper h2 span.subscribedClub:hover span.glyphicon{
-	color: lightblue;
-	cursor: pointer;
+span.subscribedClub a span {
+	font-size: 12px
 }
+
+
 .content .oneNews {
 	height: 200px;
 	border: 1px solid lightgrey;
@@ -73,5 +68,12 @@
 	border-top: 1px solid lightgrey;
 	padding-top: 20px;
 	overflow: auto;
+}
+
+/*No belong*/
+.noBelong {
+	color: DarkTurquoise;
+	font-size: 22px;
+	display: inline-block;
 }
 
