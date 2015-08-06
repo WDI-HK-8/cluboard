@@ -1,68 +1,68 @@
 .wrapper {
-	padding: 20px 200px 20px 200px;
-	text-align: center;
+  padding: 20px 200px 20px 200px;
+  text-align: center;
 }
 
 
 .wrapper h2.banner {
-	margin-top: 220px;
-	font-size: 38px;
-	color: white;
+  margin-top: 220px;
+  font-size: 38px;
+  color: white;
 }
 
 .log_in {
-	margin-top: 40px;
-	margin-bottom: 20px;
+  margin-top: 40px;
+  margin-bottom: 20px;
 }
 
 .log_in #log_in_username {
-	width: 300px;
+  width: 300px;
 }
 
 .log_in #log_in_password {
-	width: 300px;
+  width: 300px;
 }
 
 .log_in button {
-	width: 200px;
-	background-color: lightSeaGreen;
-	color: white;
-	border: 0;
+  width: 200px;
+  background-color: lightSeaGreen;
+  color: white;
+  border: 0;
 }
 
 div.breaker {
-	border-bottom: 2px solid lightgrey;
+  border-bottom: 2px solid lightgrey;
 }
 
 .sign_up {
-	margin-top: 20px;
+  margin-top: 20px;
 }
 
 .sign_up #sign_up_username {
-	width: 300px;
+  width: 300px;
 }
 
 .sign_up #sign_up_password {
-	width: 300px;
+  width: 300px;
 }
 
 .sign_up button {
-	width: 200px;
-	background-color: RoyalBlue;
-	color: white;
-	border: 0;
+  width: 200px;
+  background-color: RoyalBlue;
+  color: white;
+  border: 0;
 }
 
 div.alert {
-	margin-top: 50px;
+  margin-top: 50px;
 }
 
 div.alert-success {
-	margin-top: 200px;
+  margin-top: 200px;
 }
 
 div.notSignUp {
-	margin-top: 200px;
+  margin-top: 200px;
 }
 
 /* Background video */
