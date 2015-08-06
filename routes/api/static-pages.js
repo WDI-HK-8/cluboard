@@ -15,13 +15,19 @@ exports.register = function (server, options, next) {
 			}
 		},
 		{
-			// I DUN GET IT!!!!
 			method: 'GET',
 			path: '/public/{path*}',
 			handler: {
 				directory: {
 					path: 'public'
 				}
+			}
+		},
+		{
+			method: 'GET',
+			path: '/admin',
+			handler: function(request, reply) {
+				return reply.view('admin');
 			}
 		}
 	]);

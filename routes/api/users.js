@@ -106,7 +106,6 @@ exports.register = function (server, option, next) {
       path: "/api/users/club/{clubname}",
       handler: function (request, reply) {
         var clubname  = encodeURIComponent(request.params.clubname);
-        console.log(clubname);
         var db        = request.server.plugins['hapi-mongodb'].db;
         var session   = request.session.get('cluboard_session');
         var username  = session.username;

@@ -63,12 +63,14 @@ $(document).ready(function(){
 			dataType: 'JSON',
 			success: function (response) {
 				$('.log_in input#log_in_username').val("");
-				$('.log_in input#log_in_password').val(""); 
+				$('.log_in input#log_in_password').val("");
 				if (response.insertCookie === "success") {
 					window.location.replace('home')
 				} else if (response.insertCookie === "fail") {
 					$('div.alert-danger:not(div.notSignUp)').show();
-				};
+				} else if (response.admin === true) {
+					window.location.replace('admin');
+				}
 			},
 			error: function (err) {
 				console.log(err);

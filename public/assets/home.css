@@ -1,5 +1,5 @@
 .wrapper {
-	padding: 30px 250px 10px 250px;
+	padding: 30px 250px 100px 250px;
 	text-align: left;
 }
 
@@ -53,15 +53,25 @@ span.subscribedClub a span {
 	border: 1px solid lightgrey;
 	border-radius: 3px;
 	margin-top: 30px;
-	padding: 0 30px 0 30px;
+	padding: 0 30px 0px 30px;
 	text-align: left;
+	height: 220px;
 }
 
 .content .oneNews .title {
 	margin-top: 30px;
 	margin-bottom: 20px;
 	font-size: 32px;
-	overflow: auto;
+	width: 500px;
+	display: inline-block;
+}
+
+.content .oneNews p.newsClubname {
+	float: right;
+	width: 80px;
+	margin-top: 45px;
+	margin-right: 0;
+	overflow: scroll;
 }
 
 .content .oneNews .newsContent {
@@ -70,10 +80,26 @@ span.subscribedClub a span {
 	overflow: auto;
 }
 
+.content .oneNews .newsDate {
+	margin-top: 30px;
+	font-size: 12px;
+	color: grey;
+}
+
 /*No belong*/
 .noBelong {
 	color: DarkTurquoise;
 	font-size: 22px;
 	display: inline-block;
+}
+
+/*empty*/
+.empty {
+	color: whitesmoke;
+	font-size: 30px;
+	margin-left: 400px;
+	margin-top: 50px;
+	width: 600px;
+
 }
 
