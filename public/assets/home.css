@@ -1,79 +1,105 @@
 .wrapper {
-	padding: 30px 250px 10px 250px;
-	text-align: left;
+  padding: 30px 250px 100px 250px;
+  text-align: left;
 }
 
 .wrapper .club_code {
-	position: absolute;
-	top: 0px;
-	right: 20px;
-	width: 150px;
+  position: absolute;
+  top: 0px;
+  right: 20px;
+  width: 150px;
 }
 
 .wrapper .search_section {
-	border-bottom: 1px solid lightgrey;
+  border-bottom: 1px solid lightgrey;
 }
 
 .wrapper .search_section h2 {
-	margin-top: 10px;
-	font-size: 22px;
-	color: black;
-	margin-bottom: 10px;
+  margin-top: 10px;
+  font-size: 22px;
+  color: black;
+  margin-bottom: 10px;
 }
 
 
 .wrapper .search_section input[type="text"] {
-	border: 1px solid lightgrey;
-	font-size: 30px;
-	margin-top: 40px;
-	height: 50px;
-	margin-bottom: 50px;
+  border: 1px solid lightgrey;
+  font-size: 30px;
+  margin-top: 40px;
+  height: 50px;
+  margin-bottom: 50px;
 }
 
 span.subscribedClub a {
-	color: crimson;
-	display: inline-block;
-	margin-left: 8px;
-	text-decoration: none;
+  color: crimson;
+  display: inline-block;
+  margin-left: 8px;
+  text-decoration: none;
 }
 
 span.subscribedClub a:hover {
-	cursor: pointer;
-	color: skyblue;
-	text-decoration: underline;
+  cursor: pointer;
+  color: skyblue;
+  text-decoration: underline;
 }
 
 span.subscribedClub a span {
-	font-size: 12px
+  font-size: 12px
 }
 
 
 .content .oneNews {
-	height: 200px;
-	border: 1px solid lightgrey;
-	border-radius: 3px;
-	margin-top: 30px;
-	padding: 0 30px 0 30px;
-	text-align: left;
+  height: 200px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+  margin-top: 30px;
+  padding: 0 30px 0px 30px;
+  text-align: left;
+  height: 220px;
 }
 
 .content .oneNews .title {
-	margin-top: 30px;
-	margin-bottom: 20px;
-	font-size: 32px;
-	overflow: auto;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-size: 32px;
+  width: 500px;
+  display: inline-block;
+}
+
+.content .oneNews p.newsClubname {
+  float: right;
+  width: 80px;
+  margin-top: 45px;
+  margin-right: 0;
+  overflow: scroll;
 }
 
 .content .oneNews .newsContent {
-	border-top: 1px solid lightgrey;
-	padding-top: 20px;
-	overflow: auto;
+  border-top: 1px solid lightgrey;
+  padding-top: 20px;
+  overflow: auto;
+}
+
+.content .oneNews .newsDate {
+  margin-top: 30px;
+  font-size: 12px;
+  color: grey;
 }
 
 /*No belong*/
 .noBelong {
-	color: DarkTurquoise;
-	font-size: 22px;
-	display: inline-block;
+  color: DarkTurquoise;
+  font-size: 22px;
+  display: inline-block;
+}
+
+/*empty*/
+.empty {
+  color: whitesmoke;
+  font-size: 30px;
+  margin-left: 400px;
+  margin-top: 50px;
+  width: 600px;
+
 }
 

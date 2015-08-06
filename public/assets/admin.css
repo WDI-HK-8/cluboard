@@ -1,0 +1,74 @@
+.wrapper {
+  padding: 80px 100px 0px 100px;
+  text-align: left;
+}
+
+.addANews .inputForm {
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+  margin-top: 20px;
+}
+
+.addANews .inputForm div:first-child p {
+  color: grey;
+}
+
+.addANews .inputForm div {
+  margin-top: 30px;
+}
+
+.addANews .inputForm div textarea {
+  height: 200px;
+  display: block;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+  color: grey;
+  width: 100%;
+}
+
+.addANews .inputForm button {
+  margin-bottom: 30px;
+  background-color: skyblue;
+  color: white;
+  border: none;
+}
+
+.addAClub .inputForm {
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+  margin-top: 20px;
+}
+
+.addAClub .inputForm div:first-child p {
+  color: grey;
+}
+
+.addAClub .inputForm div {
+  margin-top: 30px;
+}
+
+.addAClub .inputForm div textarea {
+  height: 200px;
+  display: block;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+  color: grey;
+  width: 100%;
+}
+
+.addAClub .inputForm button {
+  margin-bottom: 30px;
+  background-color: skyblue;
+  color: white;
+  border: none;
+}
+
+.addAClub .back {
+  margin-top: 30px;
+  color: white;
+  height: 30px;
+  margin-left: 15px;
+  width: 95%;
+  border: none;
+  background-color: MediumSpringGreen;  
+}
